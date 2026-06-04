@@ -1,0 +1,1 @@
+role enum('admin', 'user') DEFAULT USER
