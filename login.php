@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 include 'connection.php';
 
 ?>
@@ -25,7 +26,7 @@ include 'connection.php';
     
     <form 
     class="bg-white p-6 rounded-lg shadow-md w-80 flex flex-col gap-4" 
-    action="registration.php" 
+    action="login_process.php" 
     method="post">
 
         <div>
@@ -68,15 +69,7 @@ include 'connection.php';
         </div>
 
     </form>
-<p>Don't have an account yet? <a href="sign_up.php" class="hover:text-blue-400, underline">Sign Up</a></p>
+<p>Don't have an account yet? <a href="sign_up.php" class="hover:text-blue-400 underline">Sign Up</a></p>
 </body>
 </html>
 
-<?php
-if(isset($_POST['submit'])){
-    header('location:homepage.php');
-}
-else{
-    header('location:sign_up.php');
-}
-?>
