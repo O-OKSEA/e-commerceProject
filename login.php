@@ -10,32 +10,24 @@ include 'connection.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="stylesheet.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style>
-        #d{
-            &:hover{
-                cursor:pointer;
-            }
-        }
-    </style>
 </head>
 <body>
     
-<body 
- class="bg-gray-100 h-screen flex flex-col justify-center items-center">
+<body>
     
     <form 
-    class="bg-white p-6 rounded-lg shadow-md w-80 flex flex-col gap-4" 
+    class="shadow-md" 
     action="login_process.php" 
     method="post">
 
         <div>
-            <label 
-             class="block text-sm font-medium text-blue-700">
+            <label>
              Username
             </label>
             <input 
-            class="w-full mt-1 p-2 border border-blue-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            class="focus:ring-2 focus:ring-blue-500" 
             type="text" 
             name="userName" 
             placeholder="Enter Your Username" 
@@ -48,12 +40,11 @@ include 'connection.php';
         </div> -->
 
         <div>
-            <label 
-             class="block text-sm font-medium text-blue-700">
+            <label>
              Password
             </label>
             <input 
-            class="w-full mt-1 p-2 border border-blue-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            class="focus:ring-2 focus:ring-blue-500" 
             type="password" 
             name="password" 
             placeholder="Enter your Password" 
@@ -62,14 +53,12 @@ include 'connection.php';
 
         <div>
             <input 
-            id="d" 
             type="submit" 
-            value="Log In"
-            class="border px-2 py-1.5 bg-blue-400 text-white rounded font-medium transition duration-200">
+            value="Log In">
         </div>
 
     </form>
-<p>Don't have an account yet? <a href="sign_up.php" class="hover:text-blue-400 underline">Sign Up</a></p>
+<p class="text-blue-900">Don't have an account yet? <a href="sign_up.php" class="hover:text-blue-400 underline">Sign Up</a></p>
 </body>
 </html>
 
